@@ -18,13 +18,10 @@ pipeline {
         }
         stage('build docker image') {
             steps {
-                sh '''
-                docker --version \
-                echo "Docker Available" \
-
-                docker buildx build . \
-                echo "Build Docker Image"
-                '''
+                sh 'docker --version'
+                sh 'echo "Docker Available"'
+                sh 'docker build -t pycalculator:latest .'
+                sh 'echo "Build Docker Image"'
             }
         }
     }
