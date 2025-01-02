@@ -9,7 +9,7 @@ pipeline {
             steps {
                 sh '''
                 $SONAR_SCANNER_HOME/bin/sonar-scanner \
-                  -Dsonar.projectKey=DockerizeCalculator \
+                  -Dsonar.projectKey=jenkins \
                   -Dsonar.sources=calculator.py \
                   -Dsonar.host.url=http://localhost:9000 \
                   -Dsonar.token=sqp_98d81e013d60d5565a97546b86c0546be65c77d0
