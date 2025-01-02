@@ -25,6 +25,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'dockerhubPassword', usernameVariable: 'dockerhubUser')]) {
                 sh "docker login -u ${env.dockerhubUser} -p ${env.dockerhubPassword}"
                 sh 'docker push dawoodsemab786/pycalculator:lts'
+                }
             }
         }
     }
