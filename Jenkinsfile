@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-    	SONAR_SCANNER_HOME = tool 'sonarqube-scanner-621';
+    	SONAR_SCANNER_HOME = tool 'sonarscanner6214610';
 	}
     stages {
         stage('sonarqube analysis') {
