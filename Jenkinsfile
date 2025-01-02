@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh 'docker --version'
                 sh 'echo "Docker Available"'
-                sh 'docker build -t pycalculator:lts .'
+                sh 'docker build -t dawoodsemab786/pycalculator:lts .'
                 sh 'echo "Building Docker Image"'
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'dockerhubPassword', usernameVariable: 'dockerhubUser')]) {
                 sh "docker login -u ${env.dockerhubUser} -p ${env.dockerhubPassword}"
