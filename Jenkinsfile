@@ -22,7 +22,7 @@ pipeline {
                 docker --version \
                 echo "Docker Available" \
 
-                docker build -t pycalculator:v1 . \
+                docker build pycalculator . \
                 echo "Build Docker Image"
                 '''
             }
