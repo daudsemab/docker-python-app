@@ -21,9 +21,11 @@ print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
 
-while True:
+choice = 0
+
+while choice == 0:
     # take input from the user
-    choice = 0
+    # SKIPPED this part - docker can't build images for terminal based input
 
     # check if choice is one of the four options
     if choice in ('1', '2', '3', '4'):
@@ -53,3 +55,4 @@ while True:
           break
     else:
         print("You are very smart!")
+        choice += 1
